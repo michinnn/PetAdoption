@@ -15,9 +15,9 @@ function App() {
 
       <Routes>
         <Route exact path='/' element={<About/>}/>
-        <Route path='/testimonialpage' element={<Testimonial/>}/>
-        <Route path='/adoptpage' element={<Adopt/>}/>
-        <Route path='/profilepage' element={<Profile/>}/>
+        <Route path='/PetAdoption/testimonialpage' element={<Testimonial/>}/>
+        <Route path='/PetAdoption/adoptpage' element={<Adopt/>}/>
+        <Route path='/PetAdoption/profilepage' element={<Profile/>}/>
       </Routes>
 
       </Router>
