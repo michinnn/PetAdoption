@@ -1,4 +1,6 @@
 import { FaUser } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+
 const NavBar = () => {
     return(
         <>
@@ -11,10 +13,10 @@ const NavBar = () => {
            </div>
 
              <div className='flex gap-14 '>
-              <a href="/" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>About</a>
-              <a href="/PetAdoption/testimonialpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>Testimonies</a>
-              <a href="/PetAdoption/adoptpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>Adopt</a>
-              <a href="/PetAdoption/profilepage"><FaUser className='text-[#DC8857]/50 hover:text-[#DC8857] mt-1 cursor-pointer'/></a>
+              <Link to="/" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>About</Link>
+              <Link to="/testimonialpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>Testimonies</Link>
+              <Link to="/adoptpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>Adopt</Link>
+              <Link to="/profilepage"><FaUser className='text-[#DC8857]/50 hover:text-[#DC8857] mt-1 cursor-pointer'/></Link>
              </div>
 
         </div>
