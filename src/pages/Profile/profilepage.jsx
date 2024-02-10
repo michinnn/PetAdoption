@@ -6,7 +6,7 @@ const Profile = () => {
         
         <div className="flex flex-col h-screen w-full items-center px-24 py-24">
             <div className="h-1/2">
-                <img src="/underconstruction.png" alt="" className="h-96 w-fit"/>
+                <img src="/PetAdoption/underconstruction.png" alt="" className="h-96 w-fit"/>
             </div>
             <div className="h-1/2">
                 <p className="text-4xl pt-36 font-protest text-[#DC8857]">Sorry! This page is still underconstruction.</p>

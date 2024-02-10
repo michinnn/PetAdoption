@@ -9,7 +9,6 @@ export default {
       fontFamily:{
         "lato": ['Lato', 'sans-serif'],
         "protest": ['Protest Riot', 'sans-serif'],
-        maxHeight:['focus']
       }
     },
   },
