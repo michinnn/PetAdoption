@@ -14,10 +14,10 @@ function App() {
       <NavBar/>
 
       <Routes>
-        <Route exact path='/#/' element={<About/>}/>
-        <Route path='/#/testimonialpage' element={<Testimonial/>}/>
-        <Route path='/#/adoptpage' element={<Adopt/>}/>
-        <Route path='/#/profilepage' element={<Profile/>}/>
+        <Route exact path='/' element={<About/>}/>
+        <Route path='/testimonialpage' element={<Testimonial/>}/>
+        <Route path='/adoptpage' element={<Adopt/>}/>
+        <Route path='/profilepage' element={<Profile/>}/>
       </Routes>
 
       </Router>
