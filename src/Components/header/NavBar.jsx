@@ -11,7 +11,7 @@ const NavBar = () => {
            </div>
 
              <div className='flex gap-14'>
-              <a href="/aboutpage" className='text-gray-400 font-semibold hover:text-[#DC8857] hover:font-semibold'>About</a>
+              <a href="/" className='text-gray-400 font-semibold hover:text-[#DC8857] hover:font-semibold'>About</a>
               <a href="/testimonialpage" className='text-gray-400 font-semibold hover:text-[#DC8857] hover:font-semibold'>Testimonies</a>
               <a href="/adoptpage" className='text-gray-400 font-semibold hover:text-[#DC8857] hover:font-semibold'>Adopt</a>
               <a href="/profilepage"><FaUser className='text-[#DC8857]/50 hover:text-[#DC8857] mt-1 cursor-pointer'/></a>

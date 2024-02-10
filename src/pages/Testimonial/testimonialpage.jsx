@@ -1,4 +1,5 @@
 import React from "react";
+import { TypeAnimation } from 'react-type-animation';
 
 const Testimonial = () => {
     return(
@@ -14,6 +15,7 @@ const Testimonial = () => {
               <img src="/pet.png" alt="" className='h-1/2 w-2/3 pt-16'/>
            </div>
         </div>
+        <h1 className="text-8xl text-left font-protest text-white">UNDER CONSTRUCTION</h1>
       </div>
     {/* END OF TESTIMONIALS */}
         
