@@ -34,11 +34,11 @@ const About = () => {
    <p className='pt-2 font-sans font-light'>Finding loving homes for every pet in need. Our mission is to facilitate the process of pet adoption, connecting compassionate individuals with their perfect furry companions.</p>
    <div className='pt-6'>
 
-    <a href="/PetAdoption/adoptpage">
+    <Link to="/adoptpage">
     <button className='px-6 hover:bg-[#DC8857] hover:text-white font-semibold text-[#DC8857] p-1.5 rounded border border-[#DC8857] shadow'>
         Adopt Now
     </button>
-    </a>
+    </Link>
    </div>
 
  </div>
