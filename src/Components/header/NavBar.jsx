@@ -1,6 +1,7 @@
 import { FaUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
+
 const NavBar = () => {
     return(
         <>
@@ -13,10 +14,10 @@ const NavBar = () => {
            </div>
 
              <div className='flex gap-14 '>
-              <Link to="/" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>About</Link>
-              <Link to="/testimonialpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>Testimonies</Link>
-              <Link to="/adoptpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold'>Adopt</Link>
-              <Link to="/profilepage"><FaUser className='text-[#DC8857]/50 hover:text-[#DC8857] mt-1 cursor-pointer'/></Link>
+              <Link to="/" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>About</Link>
+              <Link to="/testimonialpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>Testimonies</Link>
+              <Link to="/adoptpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>Adopt</Link>
+              <Link to="/profilepage" className="text-gray-300 hover:text-[#DC8857] mt-1 cursor-pointer focus:text-[#DC8857]"><FaUser/></Link>
              </div>
 
         </div>
