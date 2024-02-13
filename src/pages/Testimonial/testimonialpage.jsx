@@ -1,6 +1,8 @@
 import React from "react";
+import Testimonies from "../../Components/testimonies/testimonies";
 
-const Testimonial = () => {
+function Testimonial (){
+
     return(
         <>
         
@@ -14,7 +16,27 @@ const Testimonial = () => {
               <img src="/PetAdoption/pet.png" alt="" className='h-1/2 w-2/3 pt-16'/>
            </div>
         </div>
-        <h1 className="text-8xl text-left font-protest text-white">UNDER CONSTRUCTION</h1>
+          <div>
+            <p className="text-white text-xl font-serif">here are some of our responsible</p>
+            <h1 className="text-8xl text-left font-protest text-white">Furparents</h1>
+            <p className="text-white text-xl font-serif">who shares their <span className="text-3xl text-white italic font-semibold">lovely</span> stories after adopting our dear angels.</p>
+          </div>
+
+      </div>
+
+      
+      <div className="h-screen w-full px-24 pt-40">
+        <div className="grid grid-cols-3 gap-20 justify-center">
+
+
+            <Testimonies Title = "Maggie & Lorice" 
+                          desc ="lorem ipsum dolor sit amet consectetur adipiscing elit, pulvinar enim aenean quis curae risus libero, nec leo curabitur cubilia nascetur rhoncus. Senectus odio ante habitant vehicula orci taciti turpis, varius etiam ullamcorper dapibus magna ac, vivamus nostra nulla auctor blandit faucibus. "/>
+            <Testimonies Title = "Maggie & Lorice" 
+                          desc ="lorem ipsum dolor sit amet consectetur adipiscing elit, pulvinar enim aenean quis curae risus libero, nec leo curabitur cubilia nascetur rhoncus. Senectus odio ante habitant vehicula orci taciti turpis, varius etiam ullamcorper dapibus magna ac, vivamus nostra nulla auctor blandit faucibus. "/>
+            <Testimonies Title = "Maggie & Lorice" 
+                          desc ="lorem ipsum dolor sit amet consectetur adipiscing elit, pulvinar enim aenean quis curae risus libero, nec leo curabitur cubilia nascetur rhoncus. Senectus odio ante habitant vehicula orci taciti turpis, varius etiam ullamcorper dapibus magna ac, vivamus nostra nulla auctor blandit faucibus. "/>
+        
+        </div>
       </div>
     {/* END OF TESTIMONIALS */}
         
