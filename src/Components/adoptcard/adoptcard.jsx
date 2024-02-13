@@ -22,7 +22,7 @@ function AdoptCard(props) {
         <div className="grid grid-cols-3 gap-4">
         {/* DOG IMAGE */}
         <div className="h-full w-fit flex justify-center">
-            <img src="/PetAdoption/dogadopt.jpg" alt="" className="h-96 w-full"/>
+            <img src="/PetAdoption/dogadopt.jpg" alt="" className="h-80 w-full"/>
         </div>
         
         {/* DOG DESCRIPTION-SUMMARY */}
