@@ -7,7 +7,7 @@ function Adopt() {
 
     return(
         <>
-            <div className="h-screen w-full flex flex-col px-24 pt-20 gap-10">
+            <div className="h-screen w-full px-24 flex flex-col pt-20 gap-10">
               <AdoptCard/>
               <AdoptCard/>
               <AdoptCard/>

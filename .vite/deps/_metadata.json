@@ -2,54 +2,54 @@
   "hash": "14a5b932",
   "configHash": "54db9456",
   "lockfileHash": "55dc0084",
-  "browserHash": "f53a0d1b",
+  "browserHash": "05cfe3c7",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "9038376b",
+      "fileHash": "654103a2",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "3279fa4a",
+      "fileHash": "b79e8199",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "36f2fa2e",
+      "fileHash": "03286008",
       "needsInterop": false
     },
     "react-icons/fa6": {
       "src": "../../node_modules/react-icons/fa6/index.mjs",
       "file": "react-icons_fa6.js",
-      "fileHash": "70ea0d37",
-      "needsInterop": false
-    },
-    "react-icons/fa": {
-      "src": "../../node_modules/react-icons/fa/index.mjs",
-      "file": "react-icons_fa.js",
-      "fileHash": "ed89dcae",
+      "fileHash": "64b15e84",
       "needsInterop": false
     },
     "react-type-animation": {
       "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
       "file": "react-type-animation.js",
-      "fileHash": "a3a00e1e",
+      "fileHash": "61ec707f",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "450f716f",
       "needsInterop": false
     },
     "react-icons/io5": {
       "src": "../../node_modules/react-icons/io5/index.mjs",
       "file": "react-icons_io5.js",
-      "fileHash": "3e66afe8",
+      "fileHash": "c6a978ef",
       "needsInterop": false
     },
     "react-icons/md": {
       "src": "../../node_modules/react-icons/md/index.mjs",
       "file": "react-icons_md.js",
-      "fileHash": "d457ba72",
+      "fileHash": "2c784cfb",
       "needsInterop": false
     }
   },
