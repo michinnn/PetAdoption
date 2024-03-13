@@ -6,6 +6,8 @@ import Profile from './pages/Profile/profilepage';
 import About from './pages/About/aboutpage';
 import AdoptionFile from './pages/Adopt/adoptionfile';
 import PetInfo from './pages/Adopt/petinfo';
+import SignIn from './pages/SignIn-SignUp/signin';
+import SignUp from './pages/SignIn-SignUp/signup';
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path='/profilepage' element={<Profile/>}/>
         <Route path='/adoptionfile' element={<AdoptionFile/>}/>
         <Route path='/petinfo' element={<PetInfo/>}/>
+        <Route path='/signin' element={<SignIn/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
       </Routes>
 
       </Router>
