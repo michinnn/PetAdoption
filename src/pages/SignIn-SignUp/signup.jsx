@@ -40,17 +40,17 @@ const SignUp = () => {
                          <input type="password" placeholder="●●●●●●●●" className="w-full border rounded p-1.5"/>
                     </div>
                 </div>
-               <div className="flex w-full justify-between">
-
-                    <Link to="/">
-                    <button className="px-14 hover:bg-[#DC8857]/90 text-white font-semibold bg-[#DC8857] p-1.5 rounded shadow">Sign Up</button>
-                    </Link>
 
                     <Link to="/signin">
-                    <button className="px-14 hover:underline font-semibold text-[#DC8857] p-1.5">Log In</button>
+                    <button className="w-full hover:bg-[#DC8857]/90 text-white font-semibold bg-[#DC8857] p-1.5 rounded shadow">Sign Up</button>
                     </Link>
-               </div>
               </div>
+              <div className="flex text-xs text-black/70 font-sans">
+                      <p>Already have an account?</p>
+                    <Link to="/signin">
+                    <button className="text-xs hover:underline font-semibold text-[#DC8857] px-1">Log In</button>
+                    </Link>
+                    </div>
             </div>
         </div>
       </div>

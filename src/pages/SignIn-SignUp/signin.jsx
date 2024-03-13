@@ -25,16 +25,23 @@ const SignIn = () => {
                     <p className="text-[#DC8857] font-semibold">Password:</p>
                          <input type="password" placeholder="●●●●●●●●" className="w-full border rounded p-1.5"/>
                     </div>
+                    <div className="flex text-xs justify-end">
+                    <button className="text-xs hover:underline font-semibold text-[#DC8857] px-1">Forgot password?</button>
+                    </div>
                 </div>
-               <div className="flex w-full justify-between">
+               <div className="w-full">
                     <Link to="/">
-                    <button className="px-14 hover:bg-[#DC8857]/90 text-white font-semibold bg-[#DC8857] p-1.5 rounded shadow">Log In</button>
+                    <button className="w-full hover:bg-[#DC8857]/90 text-white font-semibold bg-[#DC8857] p-1.5 rounded shadow">Log In</button>
                     </Link>
-                    <Link to="/signup">
-                    <button className="px-14 hover:underline font-semibold text-[#DC8857] p-1.5">Sign Up</button>
-                    </Link>
+
                </div>
               </div>
+              <div className="flex text-xs text-black/70 font-sans">
+                      <p>Create an account here.</p>
+                    <Link to="/signup">
+                    <button className="text-xs hover:underline font-semibold text-[#DC8857] px-1">Sign Up</button>
+                    </Link>
+                    </div>
             </div>
         </div>
       </div>
