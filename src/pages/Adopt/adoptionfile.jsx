@@ -31,7 +31,7 @@ const AdoptionFile = () => {
                     </div>
                   <div className="flex flex-col">
                     <p className="text-[#DC8857] font-semibold">Email address: <span className="text-xs text-red-500">*</span></p>
-                        <input required type="text" placeholder="example@gmail.com" className="w-full border rounded p-1.5"/>
+                        <input required type="email" placeholder="example@gmail.com" className="w-full border rounded p-1.5"/>
                   </div>
                   <div className="flex flex-col">
                     <p className="text-[#DC8857] font-semibold">Address: <span className="text-xs text-red-500">*</span></p>

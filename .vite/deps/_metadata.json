@@ -2,54 +2,54 @@
   "hash": "14a5b932",
   "configHash": "54db9456",
   "lockfileHash": "55dc0084",
-  "browserHash": "05cfe3c7",
+  "browserHash": "f53a0d1b",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "f0816bcf",
+      "fileHash": "93684df0",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "e7683bca",
+      "fileHash": "a2000bef",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "c10475ed",
+      "fileHash": "8239b827",
       "needsInterop": false
     },
     "react-icons/fa6": {
       "src": "../../node_modules/react-icons/fa6/index.mjs",
       "file": "react-icons_fa6.js",
-      "fileHash": "40720bc4",
-      "needsInterop": false
-    },
-    "react-type-animation": {
-      "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
-      "file": "react-type-animation.js",
-      "fileHash": "be672abb",
+      "fileHash": "b0325ad9",
       "needsInterop": false
     },
     "react-icons/fa": {
       "src": "../../node_modules/react-icons/fa/index.mjs",
       "file": "react-icons_fa.js",
-      "fileHash": "32fe7dbd",
+      "fileHash": "3109f27e",
+      "needsInterop": false
+    },
+    "react-type-animation": {
+      "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
+      "file": "react-type-animation.js",
+      "fileHash": "39700837",
       "needsInterop": false
     },
     "react-icons/io5": {
       "src": "../../node_modules/react-icons/io5/index.mjs",
       "file": "react-icons_io5.js",
-      "fileHash": "2e7fb48a",
+      "fileHash": "1381b8b4",
       "needsInterop": false
     },
     "react-icons/md": {
       "src": "../../node_modules/react-icons/md/index.mjs",
       "file": "react-icons_md.js",
-      "fileHash": "b18d1fe2",
+      "fileHash": "a0870f9e",
       "needsInterop": false
     }
   },
