@@ -11,7 +11,7 @@ const SignIn = () => {
         </div>
             <div className="flex w-full h-full justify-center items-center flex-col gap-2">
                 <div className="flex flex-col items-center gap-2">
-                  <h1 className="font-protest text-6xl text-[#DC8857]">LOGIN</h1>
+                  <h1 className="font-protest text-6xl text-[#DC8857]">LOG IN</h1>
                   <h2 className="font-sans font-semibold">Welcome back! Please log-in your account here.</h2>
                 </div>
 
