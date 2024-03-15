@@ -1,19 +1,20 @@
 import React from "react";
+import { useState } from 'react'
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Modal from "../../Components/Modal/modal";
 
 function PetInfo(props) {
 
-    // const [modal, setModal] = useState(false)
+    const [modal, setModal] = useState(false)
 
-    // const openModal = () => {
-    //     setModal(true);
-    //   };
+    const openModal = () => {
+        setModal(true);
+      };
 
-    // const closeModal = () => {
-    //     setModal(false);
-    // };
+    const closeModal = () => {
+        setModal(false);
+    };
 
 
 
@@ -53,21 +54,20 @@ function PetInfo(props) {
                                 </div>
                             </div>
                             <div className="flex flex-col pt-5 w-full">
-                             <button className="border border-[#DC8857] text-[#DC8857] hover:bg-[#DC8857] hover:text-white rounded-full p-3 font-semibold">Adopt Me</button>
-                                {/* <button onClick={() => setModal(true)} className="bg-[#DC8857] hover:bg-[#DC8857]/90 font-semibold text-white py-2 px-16 rounded">
+                                <button onClick={() => setModal(true)} className="bg-[#DC8857] hover:bg-[#DC8857]/90 font-semibold text-white py-2 px-16 rounded">
                                      Adopt Me
-                                </button> */}
+                                </button>
                             </div>
                     </div>
                 </div>
             </div>
         </div>
-{/* 
+
         { modal && (
                 <Modal title="Data Privacy Policy"
                     desc="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You. We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy."
                     closeModal={closeModal} />)
-         } */}
+         }
         
         </>
     )
