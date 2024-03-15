@@ -3,7 +3,7 @@ import Modal from "../../Components/Modal/modal";
 import { Link } from "react-router-dom";
 
 
-function AdoptCard(props) {
+function AdoptCard() {
 
     
     const [modal, setModal] = useState(false)
@@ -22,7 +22,7 @@ function AdoptCard(props) {
         <div className="grid grid-cols-3 gap-4">
         {/* DOG IMAGE */}
         <div className="h-full w-fit flex justify-center">
-            <img src="/PetAdoption/dogadopt.jpg" alt="" className="h-80 w-full"/>
+            <img src="/PetAdoption/dogadopt.jpg" alt="" className="h-80 w-full rounded"/>
         </div>
         
         {/* DOG DESCRIPTION-SUMMARY */}
@@ -52,6 +52,7 @@ function AdoptCard(props) {
                     desc="This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You. We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy."
                     closeModal={closeModal} />)
          }
+         
         </>
     )
 }export default AdoptCard

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SignIn = () => {
     return(
         <>
-                <div className="flex h-screen w-full px-24">
+      <div className="flex h-screen w-full px-24">
       <div className="flex w-full">
         <div className="flex justify-center items-center">
           <img src="pets.png" alt="" />

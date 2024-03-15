@@ -8,6 +8,7 @@ import AdoptionFile from './pages/Adopt/adoptionfile';
 import PetInfo from './pages/Adopt/petinfo';
 import SignIn from './pages/SignIn-SignUp/signin';
 import SignUp from './pages/SignIn-SignUp/signup';
+import EditProfile from './pages/Profile/editprofile';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/petinfo' element={<PetInfo/>}/>
         <Route path='/signin' element={<SignIn/>}/>
         <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/editprofile' element={<EditProfile/>}/>
       </Routes>
 
       </Router>
