@@ -7,10 +7,12 @@ const Profile = () => {
         <>
         
             <div className="flex justify-center px-24 py-40">
-                <div className="flex flex-col justify-center">
+                <div className="flex flex-col">
+                <div className="flex flex-col items-center">
                     <FaCircleUser className="w-[20vw] h-[20vh] text-gray-400" />
-                    <div className="flex flex-col pt-5 gap-5">
-                        <div className="text-[#DC8857] text-3xl flex justify-center font-semibold">User</div>
+                </div>
+                    <div className="flex flex-col pt-2 gap-2 lg:pt-5 lg:gap-5">
+                        <div className="text-[#DC8857] text-xl lg:text-3xl flex justify-center font-semibold">User</div>
                         <Link to="/editprofile">
                         <button className="w-full bg-[#DC8857] hover:bg-[#DC8857]/90 rounded p-2 text-white">Edit Profile</button>
                         </Link>

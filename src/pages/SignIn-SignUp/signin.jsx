@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 const SignIn = () => {
     return(
         <>
-      <div className="flex h-screen w-full px-24">
+      <div className="flex h-screen w-full px-14 lg:px-24">
       <div className="flex w-full">
-        <div className="flex justify-center items-center">
+        <div className="hidden lg:flex justify-center items-center">
           <img src="pets.png" alt="" />
         </div>
             <div className="flex w-full h-full justify-center items-center flex-col gap-2">
                 <div className="flex flex-col items-center gap-2">
-                  <h1 className="font-protest text-6xl text-[#DC8857]">LOG IN</h1>
-                  <h2 className="font-sans font-semibold">Welcome back! Please log-in your account here.</h2>
+                  <h1 className="font-protest text-3xl lg:text-6xl text-[#DC8857]">LOG IN</h1>
+                  <h2 className="font-sans font-semibold text-sm lg:text-lg">Welcome back! Please log-in your account here.</h2>
                 </div>
 
-              <div className="flex w-2/3 border shadow rounded flex-col p-10 gap-5">
+              <div className="flex w-full lg:w-2/3 border shadow rounded flex-col p-5 lg:p-10 gap-5">
                 <div className="font-sans flex flex-col gap-5">
                     <div className="flex flex-col">
-                    <p className="text-[#DC8857] font-semibold">Email:</p>
-                        <input type="text" placeholder="example@gmail.com" className="w-full border rounded p-1.5"/>
+                    <p className="text-[#DC8857] font-semibold text-md">Email:</p>
+                        <input type="text" placeholder="example@gmail.com" className="text-md w-full border rounded p-1.5"/>
                     </div>
                     <div className="flex flex-col">
-                    <p className="text-[#DC8857] font-semibold">Password:</p>
-                         <input type="password" placeholder="●●●●●●●●" className="w-full border rounded p-1.5"/>
+                    <p className="text-[#DC8857] font-semibold text-md">Password:</p>
+                         <input type="password" placeholder="●●●●●●●●" className="text-md w-full border rounded p-1.5"/>
                     </div>
                     <div className="flex text-xs justify-end">
                     <button className="text-xs hover:underline font-semibold text-[#DC8857] px-1">Forgot password?</button>
@@ -31,7 +31,7 @@ const SignIn = () => {
                 </div>
                <div className="w-full">
                     <Link to="/">
-                    <button className="w-full hover:bg-[#DC8857]/90 text-white font-semibold bg-[#DC8857] p-1.5 rounded shadow">Log In</button>
+                    <button className="text-md w-full hover:bg-[#DC8857]/90 text-white font-semibold bg-[#DC8857] p-1.5 rounded shadow">Log In</button>
                     </Link>
 
                </div>
