@@ -2,54 +2,60 @@
   "hash": "14a5b932",
   "configHash": "54db9456",
   "lockfileHash": "55dc0084",
-  "browserHash": "05cfe3c7",
+  "browserHash": "da48649b",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "04071f63",
+      "fileHash": "c6b854c9",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "c41b1a8b",
+      "fileHash": "208c1d0a",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "39251a72",
+      "fileHash": "952bd5a2",
       "needsInterop": false
     },
     "react-icons/fa6": {
       "src": "../../node_modules/react-icons/fa6/index.mjs",
       "file": "react-icons_fa6.js",
-      "fileHash": "373dd248",
+      "fileHash": "2feef925",
       "needsInterop": false
     },
-    "react-type-animation": {
-      "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
-      "file": "react-type-animation.js",
-      "fileHash": "16c42835",
+    "react-icons/io": {
+      "src": "../../node_modules/react-icons/io/index.mjs",
+      "file": "react-icons_io.js",
+      "fileHash": "de062b03",
       "needsInterop": false
     },
     "react-icons/fa": {
       "src": "../../node_modules/react-icons/fa/index.mjs",
       "file": "react-icons_fa.js",
-      "fileHash": "7c016618",
+      "fileHash": "47fd9fe5",
+      "needsInterop": false
+    },
+    "react-type-animation": {
+      "src": "../../node_modules/react-type-animation/dist/esm/index.es.js",
+      "file": "react-type-animation.js",
+      "fileHash": "c1e37cee",
       "needsInterop": false
     },
     "react-icons/io5": {
       "src": "../../node_modules/react-icons/io5/index.mjs",
       "file": "react-icons_io5.js",
-      "fileHash": "872b4361",
+      "fileHash": "c8260188",
       "needsInterop": false
     },
     "react-icons/md": {
       "src": "../../node_modules/react-icons/md/index.mjs",
       "file": "react-icons_md.js",
-      "fileHash": "dba8c43f",
+      "fileHash": "1515a18c",
       "needsInterop": false
     }
   },

@@ -22,7 +22,7 @@ function NavBar(props){
         <>
             {/* start of navbar */}
       <nav className='w-full z-40 fixed top-0 right-0 left-0 bg-white/80 rounded-b-sm shadow-sm border-b-sm'> 
-        <div className='flex px-14 lg:px-24 py-2 justify-between items-center'>
+        <div className='flex px-8 lg:px-20 py-2 justify-between items-center'>
 
           <div className='h-6 w-6 lg:h-10 lg:w-10'>
             <img src="/PetAdoption/paw.png" alt="" />
@@ -53,7 +53,7 @@ function NavBar(props){
       {/* end of navbar */}
 
       { modal && (
-                <div className="lg:hidden flex w-fit h-fit fixed z-40 top-12 right-14 rounded border p-2 gap-2 bg-white/90">
+                <div className="lg:hidden flex w-fit h-fit fixed z-40 top-12 right-8 rounded border p-2 gap-2 bg-white/90">
                 <div className="flex flex-col text-end">
                     <Link to="/" className='font-semibold text-[#DC8857]'>About</Link>
                     <Link to="/testimonialpage" className='font-semibold text-[#DC8857]'>Testimonies</Link>

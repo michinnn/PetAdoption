@@ -6,7 +6,7 @@ const AdoptionFile = () => {
     return(
         <>
         
-        <div className="h-screen px-14 lg:px-24">
+        <div className="h-screen px-8 lg:px-20">
 
         <div className="pt-16">
                 <Link to='/adoptpage'><FaArrowLeft/></Link>

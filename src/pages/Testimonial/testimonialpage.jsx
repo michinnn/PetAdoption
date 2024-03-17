@@ -8,18 +8,23 @@ function Testimonial (){
         
     {/* START OF TESTIMONIALS */}
           
-      <div className='h-screen w-full bg-[#DC8857] px-14 lg:px-24 gap-10 py-20 lg:py-28 lg:gap-32 flex flex-col lg:flex-row items-center'>
-        <div className='flex w-fit lg:w-1/2'>
-          <div className='rounded-full bg-white w-52 h-52 lg:w-96 lg:h-96 z-10 relative shadow-md'></div>
+      <div className='h-screen w-full bg-[#DC8857] px-8 lg:px-20 pt-16 flex flex-col lg:flex-row items-center'>
+        <div className='flex'>
         
-            <div className='z-20 absolute lg:left-36 left-20'>
-              <img src="/PetAdoption/pet.png" alt="" className='pt-8 h-1/2 w-2/3 lg:pt-16'/>
+         </div>
+
+          <div className="flex flex-col lg:flex-row w-full lg:justify-between items-center">
+
+          <div className='z-20 w-full flex justify-center'>
+              <img src="/PetAdoption/peticon.png" alt="" className="w-2/3 lg:w-3/4"/>
            </div>
-        </div>
-          <div>
-            <p className="text-white text-md lg:text-xl font-serif pt-10">here are some of our responsible</p>
-            <h1 className="text-6xl lg:text-8xl text-left font-protest text-white">Furparents</h1>
-            <p className="text-white text-md lg:text-xl font-serif">who shares their <span className="text-2xl lg:text-3xl text-white italic font-semibold">lovely</span> stories after adopting our dear angels.</p>
+
+           <div className="flex flex-col w-full justify-center">
+             <p className="text-white text-sm lg:text-xl font-serif pt-10">here are some of our responsible</p>
+              <h1 className="text-5xl lg:text-8xl text-left font-protest text-white">Furparents</h1>
+             <p className="text-white text-sm lg:text-xl font-serif">who shares their <span className="text-2xl lg:text-3xl text-white italic font-semibold">lovely</span> stories after adopting our dear angels.</p>
+           </div>
+
           </div>
 
       </div>

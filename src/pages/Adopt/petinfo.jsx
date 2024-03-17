@@ -21,7 +21,7 @@ function PetInfo(props) {
     return(
         <>
         
-        <div className="h-screen px-14 lg:px-24">
+        <div className="h-screen px-8 lg:px-20">
             <div className="pt-16 lg:pt-20">
                 <Link to='/adoptpage'><FaArrowLeft/></Link>
             </div>

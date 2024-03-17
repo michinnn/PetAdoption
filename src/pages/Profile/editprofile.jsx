@@ -7,8 +7,8 @@ const EditProfile = () => {
     return(
         <>
         
-        <div className="flex h-screen w-full px-14 lg:px-24 justify-center">
-            <div className="flex flex-col w-full h-fit p-8 gap-2 lg:border m-6 lg:m-20 rounded-lg">
+        <div className="flex h-screen w-full px-8 lg:px-20 justify-center">
+            <div className="flex flex-col w-full h-fit lg:p-8 gap-2 lg:border py-14 lg:m-20 rounded-lg">
                 <p className="font-protest text-2xl lg:text-3xl text-[#DC8857]">Edit Profile</p>
 
                 <div className="flex flex-col gap-2 w-full">
