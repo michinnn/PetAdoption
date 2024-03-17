@@ -30,7 +30,7 @@ function Testimonial (){
       </div>
 
       
-      <div className="h-screen w-full px-14 lg:px-24 pt-10 lg:pt-40">
+      <div className="h-screen w-full px-8 lg:px-20 pt-10 lg:pt-40">
         <div className="grid grid-col gap-10 lg:grid lg:grid-cols-3 lg:gap-20 justify-center">
 
 
