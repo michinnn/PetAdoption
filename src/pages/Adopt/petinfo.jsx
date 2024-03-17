@@ -28,7 +28,7 @@ function PetInfo(props) {
 
             <div className="pt-6 grid grid-row-2 lg:grid-cols-2">
                 <div className="flex w-full justify-center">
-                    <img src="/PetAdoption/dogadopt.jpg" alt="" className="w-full lg:w-3/4 h-full border rounded"/>
+                    <img src="dogadopt.jpg" alt="" className="w-full lg:w-3/4 h-full border rounded"/>
                 </div>
                 <div className="flex w-full lg:border lg:shadow lg:rounded pt-2 lg:p-12 justify-center">
                     <div className="flex flex-col w-full gap-2 lg:gap-3">

@@ -16,7 +16,7 @@ function Testimonial (){
           <div className="flex flex-col lg:flex-row w-full lg:justify-between items-center">
 
           <div className='z-20 w-full flex justify-center'>
-              <img src="/PetAdoption/peticon.png" alt="" className="w-2/3 lg:w-3/4"/>
+              <img src="peticon.png" alt="" className="w-2/3 lg:w-3/4"/>
            </div>
 
            <div className="flex flex-col w-full justify-center">

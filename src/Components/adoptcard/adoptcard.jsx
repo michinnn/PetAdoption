@@ -22,7 +22,7 @@ function AdoptCard() {
         <div className="grid grid-row-3 lg:grid-cols-3 gap-4 items-center justify-center">
         {/* DOG IMAGE */}
         <div className="h-full w-full flex justify-center">
-            <img src="/PetAdoption/dogadopt.jpg" alt="" className="h-full lg:h-80 w-full rounded"/>
+            <img src="dogadopt.jpg" alt="" className="h-full lg:h-80 w-full rounded"/>
         </div>
         
         {/* DOG DESCRIPTION-SUMMARY */}
