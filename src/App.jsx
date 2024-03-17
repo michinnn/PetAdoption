@@ -14,7 +14,7 @@ function App() {
   return (
     
     <div>
-      <Router basename='/PetAdoption/'>
+      <Router basename='/'>
 
       <NavBar/>
 

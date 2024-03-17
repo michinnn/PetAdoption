@@ -25,7 +25,7 @@ function NavBar(props){
         <div className='flex px-8 lg:px-20 py-2 justify-between items-center'>
 
           <div className='h-6 w-6 lg:h-10 lg:w-10'>
-            <img src="/PetAdoption/paw.png" alt="" />
+            <img src="paw.png" alt="" />
            </div>
 
            <IoIosMenu className="lg:hidden flex text-[#DC8857] justify-end h-7 w-6" onClick={() => setModal(!modal)}/>
