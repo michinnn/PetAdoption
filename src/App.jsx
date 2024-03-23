@@ -24,7 +24,7 @@ function App() {
         <Route path='/adoptpage' element={<Adopt/>}/>
         <Route path='/profilepage' element={<Profile/>}/>
         <Route path='/adoptionfile' element={<AdoptionFile/>}/>
-        <Route path='/petinfo' element={<PetInfo/>}/>
+        <Route path='/petinfo/:id' element={<PetInfo/>}/>
         <Route path='/signin' element={<SignIn/>}/>
         <Route path='/signup' element={<SignUp/>}/>
         <Route path='/editprofile' element={<EditProfile/>}/>

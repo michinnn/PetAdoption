@@ -29,7 +29,7 @@ function Adopt() {
         <>
             <div className="h-screen w-full px-8 lg:px-20 flex flex-col pt-20 lg:pt-24 gap-10 lg:gap-20">
             {data.map((pet) => (
-                <AdoptCard key={pet.id} name={pet.name} description={pet.description} />
+                <AdoptCard key={pet._id} _id={pet._id} name={pet.name} description={pet.description} image={pet.image} pet={pet} />
             ))}
             </div>
         </>

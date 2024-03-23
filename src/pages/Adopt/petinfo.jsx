@@ -1,11 +1,10 @@
-import React from "react";
-import { useState } from 'react'
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Modal from "../../Components/Modal/modal";
 
 function PetInfo(props) {
-
     const [modal, setModal] = useState(false)
 
     const openModal = () => {
@@ -16,7 +15,34 @@ function PetInfo(props) {
         setModal(false);
     };
 
+    const { id } = useParams();
 
+    const [pet, setPet] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const fetchData = async () => {
+        try {
+            const response = await axios.get(`http://localhost:4305/api/pet/${id}`);
+            setPet(response.data);
+        } catch (error) {
+            setError(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        console.log(id)
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        console.log(pet)
+    }, [pet]);
+
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error.message}</div>;
 
     return(
         <>
@@ -28,11 +54,11 @@ function PetInfo(props) {
 
             <div className="pt-6 grid grid-row-2 lg:grid-cols-2">
                 <div className="flex w-full justify-center">
-                    <img src="dogadopt.jpg" alt="" className="w-full lg:w-3/4 h-full border rounded"/>
+                    <img src={pet.image} alt="" className="w-full lg:w-3/4 h-full border rounded"/>
                 </div>
                 <div className="flex w-full lg:border lg:shadow lg:rounded pt-2 lg:p-12 justify-center">
                     <div className="flex flex-col w-full gap-2 lg:gap-3">
-                        <p className="font-protest text-[#DC8857] text-xl lg:text-3xl lg:pb-5">Dog Name</p>
+                        <p className="font-protest text-[#DC8857] text-xl lg:text-3xl lg:pb-5">{pet.name}</p>
                         <p className="font-sans text-gray-400 font-semibold text-sm lg:text-lg">D E T A I L S</p>
 
                             <div className="flex w-full justify-between">
@@ -45,7 +71,7 @@ function PetInfo(props) {
                                     <p className="text-gray-600">Location</p>
                                 </div>
                                 <div className="font-sans w-1/2 flex flex-col text-xs lg:text-lg gap-2">
-                                    <p className="text-gray-400">Husky</p>
+                                    <p className="text-gray-400">{pet.breed}</p>
                                     <p className="text-gray-400">Black and White</p>
                                     <p className="text-gray-400">2 months old</p>
                                     <p className="text-gray-400">Male</p>

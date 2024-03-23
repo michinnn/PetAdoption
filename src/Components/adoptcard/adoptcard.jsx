@@ -22,7 +22,7 @@ function AdoptCard(props) {
         <div className="grid grid-row-3 lg:grid-cols-3 gap-4 items-center justify-center">
         {/* DOG IMAGE */}
         <div className="h-full w-full flex justify-center">
-            <img src="dogadopt.jpg" alt="" className="h-full lg:h-80 w-full rounded"/>
+            <img src={props.image} alt="" className="h-full lg:h-80 w-full rounded"/>
         </div>
         
         {/* DOG DESCRIPTION-SUMMARY */}
@@ -40,7 +40,7 @@ function AdoptCard(props) {
                     </button>
 
 
-                    <Link to="/petinfo">
+                    <Link to={`/petinfo/${props._id}`}>
                      <button className="font-semibold text-[#DC8857] w-full hover:underline text-sm lg:text-lg flex justify-center">
                         View More
                      </button>
