@@ -3,7 +3,7 @@ import Modal from "../../Components/Modal/modal";
 import { Link } from "react-router-dom";
 
 
-function AdoptCard() {
+function AdoptCard(props) {
 
     
     const [modal, setModal] = useState(false)
@@ -27,8 +27,8 @@ function AdoptCard() {
         
         {/* DOG DESCRIPTION-SUMMARY */}
         <div className="h-1/2 w-full lg:w-fit flex flex-col justify-center">
-            <h3 className="text-xl lg:text-3xl font-protest text-[#DC8857]">Dog Name</h3>
-            <p className="text-xs lg:text-lg font-sans text-gray-400">Lorem ipsum dolor sit amet consectetur adipiscing elit per, elementum porttitor imperdiet nisl lacinia in eros curae, tempus mi nullam tincidunt leo sociosqu class. Est imperdiet aliquam luctus molestie tincidunt malesuada, magnis etiam pellentesque eleifend facilisi phasellus, commodo blandit ridiculus per in.</p>
+            <h3 className="text-xl lg:text-3xl font-protest text-[#DC8857]">{props.name}</h3>
+            <p className="text-xs lg:text-lg font-sans text-gray-400">{props.description}</p>
         </div>
 
         {/* BUTTONS */}

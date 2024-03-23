@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const About = () => {
     return(
         <>
-        
+
         {/* start of body */}
 <div className='h-screen w-full flex flex-col py-16 px-8 gap-5 items-center lg:flex-row lg:px-20 lg:gap-32'>
   <div className='flex flex-col lg:flex-row w-full lg:w-1/2'>
