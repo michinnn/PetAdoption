@@ -49,7 +49,7 @@ function PetInfo(props) {
         
         <div className="h-screen px-8 lg:px-20">
             <div className="pt-16 lg:pt-20">
-                <Link to='/adoptpage'><FaArrowLeft/></Link>
+                <Link to='/user/adoptpage'><FaArrowLeft/></Link>
             </div>
 
             <div className="pt-6 grid grid-row-2 lg:grid-cols-2">

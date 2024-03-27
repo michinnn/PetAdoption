@@ -187,7 +187,7 @@ const AdoptionFile = () => {
             </div>
 
             <div className="flex justify-end gap-5">
-              <Link to="/adoptpage">
+              <Link to="/user/adoptpage">
                 <button className="text-sm lg:text-md border hover:border-[#DC8857] border-[#DC8857]/60 rounded px-4 p-2 text-[#DC8857]">
                   Cancel
                 </button>
