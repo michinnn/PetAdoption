@@ -14,7 +14,7 @@ const Profile = () => {
                
                     <div className="flex flex-col pt-2 gap-2 lg:pt-5 lg:gap-5">
                         <div className="text-[#DC8857] text-xl lg:text-3xl flex justify-center font-semibold">User</div>
-                        <Link to="/editprofile">
+                        <Link to="/user/editprofile">
                         <button className="w-full bg-[#DC8857] hover:bg-[#DC8857]/90 rounded p-2 text-white">Edit Profile</button>
                         </Link>
                         <Link to="/signin">

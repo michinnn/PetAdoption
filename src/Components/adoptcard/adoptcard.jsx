@@ -40,7 +40,7 @@ function AdoptCard(props) {
                     </button>
 
 
-                    <Link to={`/petinfo/${props._id}`}>
+                    <Link to={`/user/petinfo/${props._id}`}>
                      <button className="font-semibold text-[#DC8857] w-full hover:underline text-sm lg:text-lg flex justify-center">
                         View More
                      </button>

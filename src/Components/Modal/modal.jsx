@@ -27,7 +27,7 @@ function Modal(props) {
                             <button onClick={props.closeModal}  className="text-[#DC8857] py-2 px-4 lg:px-8 rounded hover:underline text-sm lg:text-md">Cancel</button>
 
 
-                            <Link to="/adoptionfile">
+                            <Link to="/user/adoptionfile">
                             <button className="bg-[#DC8857] text-white py-2 px-4 lg:px-8 rounded text-sm lg:text-md">Confirm</button>
                             </Link>
                         </div>

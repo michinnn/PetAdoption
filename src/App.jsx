@@ -1,35 +1,37 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavBar from './Components/header/NavBar';
+import SignIn from './pages/SignIn-SignUp/signin';
+import SignUp from './pages/SignIn-SignUp/signup';
+import AdminPage from './pages/AdminSide/adminpage';
+import User from './pages/UserSide/user';
 import Testimonial from './pages/Testimonial/testimonialpage';
 import Adopt from './pages/Adopt/adoptpage';
 import Profile from './pages/Profile/profilepage';
 import About from './pages/About/aboutpage';
 import AdoptionFile from './pages/Adopt/adoptionfile';
 import PetInfo from './pages/Adopt/petinfo';
-import SignIn from './pages/SignIn-SignUp/signin';
-import SignUp from './pages/SignIn-SignUp/signup';
 import EditProfile from './pages/Profile/editprofile';
 
 function App() {
   return (
-    
     <div>
       <Router basename='/'>
+        <Routes>
+          <Route path="/signin" element={<SignIn />}/>
 
-      <NavBar/>
+          <Route path="/signup" element={<SignUp />}/>
 
-      <Routes>
-        <Route exact path='/' element={<About/>}/>
-        <Route path='/testimonialpage' element={<Testimonial/>}/>
-        <Route path='/adoptpage' element={<Adopt/>}/>
-        <Route path='/profilepage' element={<Profile/>}/>
-        <Route path='/adoptionfile' element={<AdoptionFile/>}/>
-        <Route path='/petinfo/:id' element={<PetInfo/>}/>
-        <Route path='/signin' element={<SignIn/>}/>
-        <Route path='/signup' element={<SignUp/>}/>
-        <Route path='/editprofile' element={<EditProfile/>}/>
-      </Routes>
+          <Route path="/user/" element={<User />}>
+            <Route path='about' element={<About />}/>
+            <Route path='testimonialpage' element={<Testimonial />}/>
+            <Route path='adoptpage' element={<Adopt />}/>
+            <Route path='profilepage' element={<Profile />}/>
+            <Route path='adoptionfile' element={<AdoptionFile />}/>
+            <Route path='petinfo/:id' element={<PetInfo />}/>
+            <Route path='editprofile' element={<EditProfile />}/>
+          </Route>
 
+          <Route path="/admin" element={<AdminPage />} />
+        </Routes>
       </Router>
     </div>
   )

@@ -58,10 +58,10 @@ const EditProfile = () => {
                             </div>
                         </div>
                         <div className="flex justify-end gap-6 items-center pt-6 lg:pt-2 w-full">
-                            <Link to="/profilepage">
+                            <Link to="/user/profilepage">
                                 <button className="hover:underline text-red-500 font-semiboldn text-sm lg:text-md">Cancel</button>
                              </Link>
-                             <Link to="/profilepage">
+                             <Link to="/user/profilepage">
                                 <button className="flex items-center hover:bg-[#DC8857] hover:text-white border border-[#DC8857] text-[#DC8857] text-sm lg:text-md font-semibold p-2 rounded-full px-5 lg:px-10">Update Profile</button>
                             </Link>
                         </div>

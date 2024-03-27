@@ -28,7 +28,7 @@ const SignIn = () => {
       localStorage.setItem('userData', JSON.stringify(response.data));
 
       // navigate to the homepage
-      navigate("/");
+      navigate("/user/about");
     } catch (error) {
       console.error('Login failed:', error);
       // Handle login error, e.g., display error message
