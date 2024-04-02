@@ -532,7 +532,7 @@ function AdminPage() {
                   <div className="flex gap-4 pt-2 font-semibold">
                     <button
                       className="border w-full rounded py-2"
-                      type="submit"
+                      onClick={() => setModal(false)}
                     >
                       Cancel
                     </button>
