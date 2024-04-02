@@ -64,9 +64,9 @@ const SignIn = () => {
                     <p className="text-[#DC8857] font-semibold text-md">Password:</p>
                     <input name="password" value={formData.password} onChange={handleChange} type="password" placeholder="●●●●●●●●" className="text-md w-full border rounded p-1.5"/>
                   </div>
-                  <div className="flex text-xs justify-end">
+                  {/* <div className="flex text-xs justify-end">
                     <button className="text-xs hover:underline font-semibold text-[#DC8857] px-1">Forgot password?</button>
-                  </div>
+                  </div> */}
               </div>
               <div className="w-full">
                   {/* <Link to="/"> */}
