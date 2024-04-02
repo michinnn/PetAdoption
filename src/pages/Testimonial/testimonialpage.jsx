@@ -31,15 +31,18 @@ function Testimonial (){
 
       
       <div className="h-screen w-full px-8 lg:px-20 pt-10 lg:pt-40">
-        <div className="grid grid-col gap-10 lg:grid lg:grid-cols-3 lg:gap-20 justify-center">
+        <div className="grid grid-col gap-10 lg:grid lg:grid-cols-3 lg:gap-20 justify-center h-full pb-20">
 
 
-            <Testimonies Title = "Maggie & Lorice" 
-                          desc ="lorem ipsum dolor sit amet consectetur adipiscing elit, pulvinar enim aenean quis curae risus libero, nec leo curabitur cubilia nascetur rhoncus. Senectus odio ante habitant vehicula orci taciti turpis, varius etiam ullamcorper dapibus magna ac, vivamus nostra nulla auctor blandit faucibus. "/>
-            <Testimonies Title = "Maggie & Lorice" 
-                          desc ="lorem ipsum dolor sit amet consectetur adipiscing elit, pulvinar enim aenean quis curae risus libero, nec leo curabitur cubilia nascetur rhoncus. Senectus odio ante habitant vehicula orci taciti turpis, varius etiam ullamcorper dapibus magna ac, vivamus nostra nulla auctor blandit faucibus. "/>
-            <Testimonies Title = "Maggie & Lorice" 
-                          desc ="lorem ipsum dolor sit amet consectetur adipiscing elit, pulvinar enim aenean quis curae risus libero, nec leo curabitur cubilia nascetur rhoncus. Senectus odio ante habitant vehicula orci taciti turpis, varius etiam ullamcorper dapibus magna ac, vivamus nostra nulla auctor blandit faucibus. "/>
+            <Testimonies Title = "Ms. Imee & Rocky" 
+                          image = "/imeeandrocky.jpg"
+                          desc ="Rocky’s sweetness and kindness towards Imee led the two to form a strong bond. Now, when we ask for pictures, Imee will tell us not to include Rocky. She will be Rocky’s adopter. I am so happy to oblige given the very obvious happiness of this dog with her furmom. They are basically inseparable."/>
+            <Testimonies Title = "Ms. Terry & Tofu" 
+                          image = "/teryandtofu.jpg"
+                          desc ="Tofu: rescued May 2023, adopted by Ms. Terry"/>
+            <Testimonies Title = "Ms. Cupie, Happy & Caly"
+                          image = "/cupieandcalyandhappy.jpg" 
+                          desc ="Rescues Aspin Happy and Shih Caly, bffs furever."/>
         
         </div>
       </div>

@@ -93,6 +93,11 @@ function EditPetModal(props) {
                             id="Image"
                         />
                     </div> */}
+                    <div className="flex flex-col w-full">
+                    <img
+                    src={pet.image}
+                    />
+                    </div>
 
                     <div className="flex flex-col w-full">
                     <label className="font-semibold text-gray-600" htmlFor="name">
@@ -143,7 +148,7 @@ function EditPetModal(props) {
                         value={pet.age || ""}
                         onChange={handleChange}
                         className="w-full border border-gray-300 h-10 rounded"
-                        type="number"
+                        type="text"
                         id="age"
                         />
                     </div>

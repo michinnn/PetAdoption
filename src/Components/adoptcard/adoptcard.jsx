@@ -28,7 +28,7 @@ function AdoptCard(props) {
         {/* DOG DESCRIPTION-SUMMARY */}
         <div className="h-1/2 w-full lg:w-fit flex flex-col justify-center">
             <h3 className="text-xl lg:text-3xl font-protest text-[#DC8857]">{props.name}</h3>
-            <p className="text-xs lg:text-lg font-sans text-gray-400">{props.description}</p>
+            <p className="text-xs break-all lg:text-lg font-sans text-gray-400">{props.description}</p>
         </div>
 
         {/* BUTTONS */}

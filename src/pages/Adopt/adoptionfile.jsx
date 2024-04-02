@@ -157,6 +157,20 @@ const AdoptionFile = () => {
             </div>
             <div className="flex flex-col">
               <p className="text-[#DC8857] font-semibold text-sm lg:text-md">
+                Facebook Link/Name: <span className="text-xs text-red-500">*</span>
+              </p>
+              <input
+                required
+                value={formData.contactNumber || ""}
+                onChange={handleChange}
+                name="fbLinkName"
+                type="text"
+                placeholder="https://www.facebook.com/******/ or Juan Dela Cruz"
+                className="w-full border rounded p-1.5 text-sm lg:text-md"
+              />
+            </div>
+            <div className="flex flex-col">
+              <p className="text-[#DC8857] font-semibold text-sm lg:text-md">
                 Contact no.: <span className="text-xs text-red-500">*</span>
               </p>
               <input

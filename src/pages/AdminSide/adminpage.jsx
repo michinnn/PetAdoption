@@ -387,7 +387,7 @@ function AdminPage() {
                         value={age}
                         onChange={(e) => setAge(e.target.value)}
                         className="w-full border border-gray-300 h-10 rounded"
-                        type="number"
+                        type="text"
                         id="age"
                       />
                     </div>

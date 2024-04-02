@@ -67,16 +67,14 @@ function PetInfo(props) {
                                     <p className="text-gray-600">Color</p>
                                     <p className="text-gray-600">Age</p>
                                     <p className="text-gray-600">Sex</p>
-                                    <p className="text-gray-600">Arrived From</p>
                                     <p className="text-gray-600">Location</p>
                                 </div>
-                                <div className="font-sans w-1/2 flex flex-col text-xs lg:text-lg gap-2">
+                                <div className="font-sans font-semibold w-1/2 flex flex-col text-xs lg:text-lg gap-2">
                                     <p className="text-gray-400">{pet.breed}</p>
-                                    <p className="text-gray-400">Black and White</p>
-                                    <p className="text-gray-400">2 months old</p>
-                                    <p className="text-gray-400">Male</p>
-                                    <p className="text-gray-400">Rescue</p>
-                                    <p className="text-gray-400">Bulacan</p>
+                                    <p className="text-gray-400">{pet.color}</p>
+                                    <p className="text-gray-400">{pet.age}</p>
+                                    <p className="text-gray-400">{pet.sex}</p>
+                                    <p className="text-gray-400">{pet.location}</p>
                                 </div>
                             </div>
                             <div className="flex flex-col pt-2 lg:pt-5 w-full">
