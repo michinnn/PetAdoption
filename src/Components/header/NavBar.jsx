@@ -34,10 +34,10 @@ function NavBar(props){
 
              <div className='hidden lg:flex lg:gap-14'>
               <Link to="/user/" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>About</Link>
-              <Link to="/user/testimonialpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>Testimonies</Link>
+              {/* <Link to="/user/testimonialpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>Testimonies</Link> */}
               <Link to="/user/adoptpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>Adopt</Link>
               <Link to="/user/profilepage" className="text-gray-300 hover:text-[#DC8857] mt-1 cursor-pointer focus:text-[#DC8857]"><FaUser/></Link>
-              <Link to="/user/adminpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>ADMIN</Link>
+              {/* <Link to="/user/adminpage" className='text-gray-300 font-semibold hover:text-[#DC8857] hover:font-semibold focus:text-[#DC8857] focus:font-semibold'>ADMIN</Link> */}
              </div>
 
         </div>
@@ -57,10 +57,10 @@ function NavBar(props){
                 <div className="lg:hidden flex w-fit h-fit fixed z-40 top-12 right-8 rounded border p-2 gap-2 bg-white/90">
                 <div className="flex flex-col text-end">
                     <Link to="/user/about" className='font-semibold text-[#DC8857]'>About</Link>
-                    <Link to="/user/testimonialpage" className='font-semibold text-[#DC8857]'>Testimonies</Link>
+                    {/* <Link to="/user/testimonialpage" className='font-semibold text-[#DC8857]'>Testimonies</Link> */}
                     <Link to="/user/adoptpage" className='font-semibold text-[#DC8857]'>Adopt</Link>
                     <Link to="/user/profilepage" className="font-semibold text-[#DC8857]">Profile</Link>
-                    <Link to="/user/adminpage" className="font-semibold text-[#DC8857]">ADMIN</Link>
+                    {/* <Link to="/user/adminpage" className="font-semibold text-[#DC8857]">ADMIN</Link> */}
                 </div>
               </div>)
             }

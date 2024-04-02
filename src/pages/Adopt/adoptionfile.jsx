@@ -39,10 +39,10 @@ const AdoptionFile = () => {
     <>
       <div className="h-screen px-8 lg:px-20">
         <div className="pt-16">
-                <Link to='/adoptpage'><FaArrowLeft/></Link>
+                <Link to='/user/adoptpage'><FaArrowLeft/></Link>
             </div>
 
-            <div className="flex justify-center items-center flex-col gap-5">
+            {/* <div className="flex justify-center items-center flex-col gap-5">
                 <h1 className="font-protest text-[#DC8857] text-3xl lg:text-5xl">Apply to Adopt</h1>
                 <div className="text-xs lg:text-base font-sans">
                     <p>Please be reminded that if you don't fill up all field with a <span className="font-sans text-red-500">*</span> mark, you will not able to submit the application.</p>
@@ -81,8 +81,8 @@ const AdoptionFile = () => {
                     <button className="bg-[#DC8857] rounded px-4 p-2 text-white hover:bg-[#DC8857]/90 text-sm lg:text-md">Submit</button>
                   </div>
                 </form>
-            </div>
-        </div>
+            </div> */}
+       
 
         <div className="flex justify-center items-center flex-col gap-5">
           <h1 className="font-protest text-[#DC8857] text-3xl lg:text-5xl">
@@ -198,6 +198,7 @@ const AdoptionFile = () => {
             </div>
           </form>
         </div>
+      </div>
     </>
   );
 };
