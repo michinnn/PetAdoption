@@ -12,6 +12,7 @@ import AdoptionFile from './pages/Adopt/adoptionfile';
 import PetInfo from './pages/Adopt/petinfo';
 import EditProfile from './pages/Profile/editprofile';
 
+
 function App() {
   return (
     <div>
