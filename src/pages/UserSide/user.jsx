@@ -8,7 +8,6 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("im in user")
     if(userRole && userRole !== "user") {
       navigate("/");
     }
