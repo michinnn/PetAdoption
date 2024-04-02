@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+// import useUserRole from "../../helpers/useUserRole";
 
 const SignIn = () => {
   const [formData, setFormData] = useState({
@@ -17,6 +18,8 @@ const SignIn = () => {
     }));
   };
 
+  // const userRole = useUserRole();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -26,9 +29,12 @@ const SignIn = () => {
       // Handle successful login, e.g., redirect to dashboard
       // Store user data in local storage
       localStorage.setItem('userData', JSON.stringify(response.data));
-
-      // navigate to the homepage
-      navigate("/user/about");
+      console.log(response.data.user.role)
+      if(response.data.user.role === "user") {
+        navigate("/user/about");
+      } else if(response.data.user.role === "admin") {
+        navigate("/admin");
+      }
     } catch (error) {
       console.error('Login failed:', error);
       // Handle login error, e.g., display error message

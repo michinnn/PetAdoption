@@ -7,6 +7,8 @@ import { BiSolidImageAdd } from "react-icons/bi";
 import EditPetModal from "../../Components/Modal/EditPetModal";
 import Loading from "../../Components/Loading";
 import ApplicationModal from "../../Components/Modal/ApplicationModal";
+import { useNavigate } from "react-router-dom";
+import useUserRole from "../../helpers/useUserRole";
 
 function AdminPage() {
   const [modal, setModal] = useState(false);
@@ -31,7 +33,7 @@ function AdminPage() {
   const [sex, setSex] = useState("");
   const [location, setLocation] = useState("");
   const [status, setStatus] = useState("For Adoption");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(null);
   const [description, setDescription] = useState("");
 
   const fetchPetList = async () => {
@@ -47,7 +49,9 @@ function AdminPage() {
 
   const fetchAdopterList = async () => {
     try {
-      const response = await axios.get("http://localhost:4305/api/adoptionApplication");
+      const response = await axios.get(
+        "http://localhost:4305/api/adoptionApplication"
+      );
       setAdopterList(response.data);
     } catch (error) {
       setError(error);
@@ -56,9 +60,16 @@ function AdminPage() {
     }
   };
 
+  const userRole = useUserRole();
+  const navigate = useNavigate();
+
   useEffect(() => {
+    if (userRole && userRole !== "admin") {
+      return navigate("/");
+    }
+
     fetchPetList();
-  }, []);
+  }, [userRole]);
 
   function toggleModal() {
     setModal(!modal);
@@ -75,31 +86,60 @@ function AdminPage() {
   function handleClick(value) {
     setSelectedPage(value);
 
-    if(value === "Adopter List") {
+    if (value === "Adopter List") {
       fetchAdopterList();
     } else {
       fetchPetList();
     }
   }
 
+  const handleImageChange = (event) => {
+    const name = event.target.id;
+    const value = event.target.value;
+
+    if (event.target.files && event.target.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        setImage(e.target.result);
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    // setPet((values) => ({ ...values, [name]: value }));
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("userData");
+    navigate("/");
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const pet = {
-      name: name,
-      color: color,
-      breed: breed,
-      age: age,
-      sex: sex,
-      location: location,
-      status: status,
-      image: image,
-      description: description,
-    };
 
-    console.log(pet);
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("color", color);
+    formData.append("breed", breed);
+    formData.append("age", age);
+    formData.append("sex", sex);
+    formData.append("location", location);
+    formData.append("status", status);
+    formData.append("description", description);
+    formData.append("image", event.target.elements.image.files[0]);
+
+    // console.log(image)
+    // return
 
     try {
-      const response = await axios.post("http://localhost:4305/api/pet", pet);
+      const response = await axios.post(
+        "http://localhost:4305/api/pet",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
       console.log("Pet added successfully:", response.data);
 
       setName("");
@@ -108,8 +148,9 @@ function AdminPage() {
       setAge(0);
       setSex("");
       setLocation("");
-      setStatus("");
-      setImage("");
+      setStatus("For Adoption");
+      setDescription("");
+      setImage(null);
 
       toggleModal();
     } catch (error) {
@@ -120,12 +161,12 @@ function AdminPage() {
   const handleEditPet = (petId) => {
     setEditPetModal(true);
     setSelectedPetId(petId);
-  }
+  };
 
   const handleEditApplication = (application) => {
     toggleApplicationModal();
     setSelectedApplication(application);
-  }
+  };
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
@@ -134,39 +175,47 @@ function AdminPage() {
     <>
       <Loading />
       <div className="flex h-screen w-full px-16">
-        <div className="border-r w-1/4 flex flex-col gap-10 pt-10">
-          <div className="flex justify-start gap-2 h-fit">
-            <div className="h-6 w-6 lg:h-10 lg:w-10">
-              <img src="/paw.png" alt="" />
+        <div className="border-r w-1/4 py-10 flex flex-col justify-between">
+          <div>
+            <div className="flex justify-start gap-2 h-fit pb-10">
+              <div className="h-6 w-6 lg:h-10 lg:w-10">
+                <img src="/paw.png" alt="" />
+              </div>
+              <div className="flex flex-col items-center">
+                <p className="font-protest text-xl font-semibold text-[#DC8857]">
+                  PAWS
+                </p>
+                <p className="font-sans font-semibold text-gray-300 text-xs">
+                  Pets Are Worth Saving
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col items-center">
-              <p className="font-protest text-xl font-semibold text-[#DC8857]">
-                PAWS
-              </p>
-              <p className="font-sans font-semibold text-gray-300 text-xs">
-                Pets Are Worth Saving
-              </p>
+            <div className="flex flex-col gap-5">
+              <div
+                onClick={() => handleClick("Pet List")}
+                className={`flex rounded hover:bg-[#DC8857]/70 hover:text-white hover:cursor-pointer text-[#DC8857] text-md font-semibold py-3 px-2 w-full ${
+                  selectedPage === "Pet List"
+                    ? "text-white bg-[#DC8857]/70"
+                    : ""
+                }`}
+              >
+                Pet List
+              </div>
+              <div
+                onClick={() => handleClick("Adopter List")}
+                className={`flex rounded hover:bg-[#DC8857]/70 hover:text-white hover:cursor-pointer text-[#DC8857] text-md font-semibold py-3 px-2 w-full ${
+                  selectedPage === "Adopter List"
+                    ? "text-white bg-[#DC8857]/70"
+                    : ""
+                }`}
+              >
+                Adopter List
+              </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5">
-            <div
-              onClick={() => handleClick("Pet List")}
-              className={`flex rounded hover:bg-[#DC8857]/70 hover:text-white hover:cursor-pointer text-[#DC8857] text-md font-semibold py-3 px-2 w-full ${
-                selectedPage === "Pet List" ? "text-white bg-[#DC8857]/70" : ""
-              }`}
-            >
-              Pet List
-            </div>
-            <div
-              onClick={() => handleClick("Adopter List")}
-              className={`flex rounded hover:bg-[#DC8857]/70 hover:text-white hover:cursor-pointer text-[#DC8857] text-md font-semibold py-3 px-2 w-full ${
-                selectedPage === "Adopter List"
-                  ? "text-white bg-[#DC8857]/70"
-                  : ""
-              }`}
-            >
-              Adopter List
-            </div>
+
+          <div>
+            <button onClick={handleLogout} className="font-semibold w-full hover:bg-red-400 hover:text-white py-2 px-3 rounded text-start">Logout</button>
           </div>
         </div>
 
@@ -220,7 +269,10 @@ function AdminPage() {
                           {pet.status}
                         </span>
                       </th>
-                      <th onClick={() => handleEditPet(pet._id)} className="py-4 text-gray-400 hover:cursor-pointer">
+                      <th
+                        onClick={() => handleEditPet(pet._id)}
+                        className="py-4 text-gray-400 hover:cursor-pointer"
+                      >
                         <FiEdit />
                       </th>
                     </tr>
@@ -253,9 +305,7 @@ function AdminPage() {
                     <th className="font-sans font-semibold text-gray-400">
                       Status
                     </th>
-                    <th className="font-sans font-semibold text-gray-400">
-                      
-                    </th>
+                    <th className="font-sans font-semibold text-gray-400"></th>
                   </tr>
                 </thead>
 
@@ -283,7 +333,10 @@ function AdminPage() {
                           {application.status}
                         </span>
                       </th>
-                      <th onClick={() => handleEditApplication(application)} className="py-4 text-gray-400 hover:cursor-pointer">
+                      <th
+                        onClick={() => handleEditApplication(application)}
+                        className="py-4 text-gray-400 hover:cursor-pointer"
+                      >
                         <FiEdit />
                       </th>
                     </tr>
@@ -315,16 +368,33 @@ function AdminPage() {
                 onSubmit={handleSubmit}
                 className="flex flex-col lg:flex-row lg:gap-10 h-full"
               >
-                <div className="w-full lg:w-1/2 h-1/2">
-                  <div className="border border-dashed p-10 w-full h-full flex flex-col items-center justify-center text-gray-300 gap-2 cursor-pointer">
-                    Attach image here.
-                    <BiSolidImageAdd size={23} />
-                    <input
-                      value={image}
-                      onChange={(e) => setImage(e.target.value)}
-                      type="file"
-                      id="Image"
-                    />
+                <div className="w-full lg:w-1/2 h-full">
+                  <div className="flex h-full">
+                    <div
+                      className={`border border-dashed p-10 ${
+                        image ? "w-1/2" : "w-full"
+                      } h-full flex flex-col items-center justify-center text-gray-300 gap-2 cursor-pointer`}
+                    >
+                      <BiSolidImageAdd size={23} />
+                      <input
+                        className="hidden"
+                        type="file"
+                        id="image"
+                        name="image"
+                        onChange={handleImageChange}
+                      />
+                      <label htmlFor="image" className="cursor-pointer">
+                        Attach Image here.
+                      </label>
+                    </div>
+
+                    {image && (
+                      <img
+                        className="w-1/2 max-h-[40vh] object-cover"
+                        src={image}
+                        alt="Pet Preview"
+                      />
+                    )}
                   </div>
 
                   <div className="flex flex-col w-full">
@@ -480,9 +550,19 @@ function AdminPage() {
         </div>
       )}
 
-      {editPetModal && <EditPetModal id={selectedPetId} handleClose={() => toggleEditPetModal()} />}
+      {editPetModal && (
+        <EditPetModal
+          id={selectedPetId}
+          handleClose={() => toggleEditPetModal()}
+        />
+      )}
 
-      {applicationModal && <ApplicationModal application={selectedApplication} handleClose={() => toggleApplicationModal()} />}
+      {applicationModal && (
+        <ApplicationModal
+          application={selectedApplication}
+          handleClose={() => toggleApplicationModal()}
+        />
+      )}
     </>
   );
 }

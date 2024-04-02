@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import OTP from "./otp";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +10,12 @@ const SignUp = () => {
     email: '',
     password: ''
   });
-  const navigate = useNavigate();
+  const [otpModal, setOtpModal] = useState(false);
+  const [email, setEmail] = useState("");
+  const [cPassword, setCPassword] = useState("");
+  const [error, setError] = useState(null);
+
+  // const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,23 +25,47 @@ const SignUp = () => {
     }));
   };
 
+  const confirmPassword = (e) => {
+    const { value } = e.target;
+    setCPassword(value);
+
+    // console.log("form.password !== value", form.password !== value)
+
+    if(formData.password !== value) {
+      setError("Password does not match.");
+    } else {
+      setError(null);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      if(error === "Password does not match.") return;
+
       const response = await axios.post('http://localhost:4305/api/user/signup', formData);
       // console.log('Login successful:', response.data);
 
       // Handle successful login, e.g., redirect to dashboard
       // Store user data in local storage
       localStorage.setItem('userData', JSON.stringify(response.data));
+      setError(null);
 
       // navigate to the homepage
-      navigate("/");
+      // navigate("/");
+      setEmail(formData.email);
+      setOtpModal(true);
+
     } catch (error) {
-      console.error('Login failed:', error);
-      // Handle login error, e.g., display error message
+      console.error('Signup failed:', error);
+      if(error.response.data.error) {
+        setError(error.response.data.error);
+      } else {
+        setError("Error signing up user.");
+      }
     }
   };
+  
   return (
     <>
       <div className="flex h-screen w-full pt-28 lg:pt-10 px-8 lg:px-20">
@@ -71,8 +101,11 @@ const SignUp = () => {
                 </div>
                 <div className="flex flex-col">
                   <p className="text-[#DC8857] font-semibold text-sm lg:text-md">Confirm Password:</p>
-                  <input type="password" placeholder="●●●●●●●●" className="text-sm lg:text-md w-full border rounded p-1.5" />
+                  <input name="cPassword" value={cPassword} onChange={confirmPassword} type="password" placeholder="●●●●●●●●" className="text-sm lg:text-md w-full border rounded p-1.5" />
                 </div>
+
+                {error && 
+                <div className="text-red-400 font-semibold">{error}</div>}
               </div>
 
               {/* <Link to="/signin"> */}
@@ -82,12 +115,15 @@ const SignUp = () => {
             <div className="flex text-xs text-black/70 font-sans">
               <p>Already have an account?</p>
               <Link to="/">
-                <button className="text-xs hover:underline font-semibold text-[#DC8857] px-1 text-sm lg:text-md">Log In</button>
+                <button className="hover:underline font-semibold text-[#DC8857] px-1 text-sm lg:text-md">Log In</button>
               </Link>
             </div>
           </div>
         </div>
       </div>
+
+      {otpModal && 
+      <OTP email={email} />}
     </>
   )
 }

@@ -1,8 +1,19 @@
 import React from "react";
 import Testimonies from "../../Components/testimonies/testimonies";
+import { useNavigate } from "react-router-dom";
+import useUserRole from "../../helpers/useUserRole";
+import { useEffect } from "react";
 
 function Testimonial (){
+  const userRole = useUserRole();
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    if(userRole && userRole !== "user") {
+      navigate("/");
+    }
+  }, [userRole]);
+  
     return(
         <>
         

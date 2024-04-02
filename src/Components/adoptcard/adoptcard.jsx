@@ -22,7 +22,7 @@ function AdoptCard(props) {
         <div className="grid grid-row-3 lg:grid-cols-3 gap-4 items-center justify-center">
         {/* DOG IMAGE */}
         <div className="h-full w-full flex justify-center">
-            <img src={props.image} alt="" className="h-full lg:h-80 w-full rounded"/>
+            <img src={`http://localhost:4305/${props.image}`} alt="" className="h-full lg:h-80 w-full rounded object-cover"/>
         </div>
         
         {/* DOG DESCRIPTION-SUMMARY */}

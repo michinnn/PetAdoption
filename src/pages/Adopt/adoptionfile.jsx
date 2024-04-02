@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
+import useUserRole from "../../helpers/useUserRole";
 
 const AdoptionFile = () => {
   const [formData, setFormData] = useState({
@@ -13,7 +13,14 @@ const AdoptionFile = () => {
     // contactNumber: "",
     // otherDetails: "",
   });
+  const userRole = useUserRole();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if(userRole && userRole !== "user") {
+      navigate("/");
+    }
+  }, []);
 
   const handleChange = (event) => {
     const name = event.target.name;

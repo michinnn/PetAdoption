@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { FaArrowLeft } from "react-icons/fa";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import Modal from "../../Components/Modal/modal";
+import useUserRole from "../../helpers/useUserRole";
 
 function PetInfo(props) {
     const [modal, setModal] = useState(false)
@@ -25,6 +26,8 @@ function PetInfo(props) {
         try {
             const response = await axios.get(`http://localhost:4305/api/pet/${id}`);
             setPet(response.data);
+        console.log(pet)
+
         } catch (error) {
             setError(error);
         } finally {
@@ -32,14 +35,16 @@ function PetInfo(props) {
         }
     };
 
-    useEffect(() => {
-        console.log(id)
-        fetchData();
-    }, []);
+    const userRole = useUserRole();
+    const navigate = useNavigate();
 
     useEffect(() => {
-        console.log(pet)
-    }, [pet]);
+        if(userRole && userRole !== "user") {
+            navigate("/");
+          }
+        // console.log(id)
+        fetchData();
+    }, []);
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error: {error.message}</div>;
@@ -54,7 +59,7 @@ function PetInfo(props) {
 
             <div className="pt-6 grid grid-row-2 lg:grid-cols-2">
                 <div className="flex w-full justify-center">
-                    <img src={pet.image} alt="" className="w-full lg:w-3/4 h-full border rounded"/>
+                    <img src={`http://localhost:4305/${pet.image}`} alt="" className="w-full lg:w-3/4 h-full object-cover border rounded"/>
                 </div>
                 <div className="flex w-full lg:border lg:shadow lg:rounded pt-2 lg:p-12 justify-center">
                     <div className="flex flex-col w-full gap-2 lg:gap-3">
@@ -68,13 +73,15 @@ function PetInfo(props) {
                                     <p className="text-gray-600">Age</p>
                                     <p className="text-gray-600">Sex</p>
                                     <p className="text-gray-600">Location</p>
+                                    <p className="text-gray-600">Description</p>
+                                    
                                 </div>
                                 <div className="font-sans font-semibold w-1/2 flex flex-col text-xs lg:text-lg gap-2">
                                     <p className="text-gray-400">{pet.breed}</p>
                                     <p className="text-gray-400">{pet.color}</p>
                                     <p className="text-gray-400">{pet.age}</p>
                                     <p className="text-gray-400">{pet.sex}</p>
-                                    <p className="text-gray-400">{pet.location}</p>
+                                    <p className="text-gray-400">{pet.description}</p>
                                 </div>
                             </div>
                             <div className="flex flex-col pt-2 lg:pt-5 w-full">
